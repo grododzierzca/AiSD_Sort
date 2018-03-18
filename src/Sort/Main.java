@@ -37,7 +37,5 @@ public class Main {
             int num = rand.nextInt(Integer.MAX_VALUE);
             System.out.println("Does the list contain number: "+num+"? -> "+ bins.bins(num));
         }
-
-
     }
 }
