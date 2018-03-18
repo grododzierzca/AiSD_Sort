@@ -11,6 +11,7 @@ public class Main {
     public static void main(String [] args){
 
         int [] tab = new int[1000000];
+        
         Random rand = new Random();
         for(int i = 0; i<tab.length; i++){
             tab[i] = rand.nextInt(Integer.MAX_VALUE);
