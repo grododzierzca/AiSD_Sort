@@ -13,7 +13,7 @@ public class BucketSort {
         if(tab.length<=1000){
             bucketSize = Integer.MAX_VALUE;
         }else{
-            bucketSize  = (Integer.MAX_VALUE/tab.length)*1000;
+            bucketSize  = Double.valueOf(2147483647000.0/tab.length);
         }
         for(int i = 0; i<tab.length/1000+1; i++){
             buckets.add(new ArrayList<Integer>());
@@ -30,11 +30,10 @@ public class BucketSort {
             }
         }
         System.out.println("Sorting buckets...");
-        int prog =0;
         for(ArrayList ar: buckets){
             threads t = new threads(ar);
             t.start();
-            prog++;
+            //SelectSort.selectSort(ar);
         }
 
         int[] tabs = new int[tab.length];
